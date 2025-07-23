@@ -186,6 +186,72 @@ The Road Accident Dashboard is a powerful tool for analyzing historical accident
 
 <img width="1138" height="637" alt="Road Accident Dashboard" src="https://github.com/user-attachments/assets/2530140b-c3ce-45ec-a6f9-5703a1743419" />
 
+--
+
+## ✅ Review Steps :
+
+### ✅ KPI Section (Top Left 3 Cards + 3 Below)
+
+| KPI                    | Requirement                                | Review                                               |
+| ---------------------- | ------------------------------------------ | ---------------------------------------------------- |
+| **Total Accidents**    | Count of accidents by year with YoY change | ✔️ Present and correctly calculated                  |
+| **Total Casualties**   | Sum by year with YoY change                | ✔️ Present, aligned with formula                     |
+| **Fatal Casualties**   | Filtered by severity + YoY                 | ✔️ Correct; reflects 26.4% YoY drop                  |
+| **Serious Casualties** | Filtered by severity + YoY                 | ✔️ Matches 16.3% YoY drop                            |
+| **Slight Casualties**  | Filtered by severity + YoY                 | ✔️ Correct; -10.82% drop                             |
+| **Vehicle Type KPI**   | Top 6 vehicle groups + YoY change          | ✔️ Grouped and YoY metrics shown clearly for 6 types |
+
+--
+
+### ✅ Vehicle Type KPI Section
+
+Requirement: Group 16 vehicle types into 6 (Motorcycle, Bus, Car, Van, Others).
+
+Dashboard View: Pie or bar chart with images + YoY and CY values.
+
+Dynamic Title: "All Casualties by Vehicle Type" (dynamic title used ✔️)
+
+✔️ Fully implemented and accurate based on your description.
+
+
+### ✅ Pie Charts
+
+***1. Casualties by Weather Condition***
+| Requirement                               | Review                   |
+| ----------------------------------------- | ------------------------ |
+| Grouped into Fine, Rain, Snow/Fog, Others | ✔️ Done                  |
+| Dynamic Title with Severity Parameter     | ✔️ Dynamic title visible |
+| Total 195.7K matches total casualties     | ✔️ Yes                   |
+
+***2. Casualties by Road Surface***
+| Requirement                                | Review              |
+| ------------------------------------------ | ------------------- |
+| Grouped into Dry, Wet, Frost/Snow, Unknown | ✔️ Correct grouping |
+| Dynamic Title                              | ✔️ Present          |
+| 195.7K total used again                    | ✔️ Matched ✔️       |
+
+### ✅ Map – Casualties by Location
+| Requirement                        | Review                                               |
+| ---------------------------------- | ---------------------------------------------------- |
+| Dots plotted by accident locations | ✔️ Map is responsive and detailed                    |
+| Dynamic Title based on severity    | ✔️ "All Casualties by Location" (severity-driven ✔️) |
+
+### ✅ Bar Chart – Casualties by Road Type
+| Requirement                                                                       | Review                                              |
+| --------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Road types such as: Single/dual carriageway, roundabout, one way, slip road, etc. | ✔️ 7 types shown with correct totals                |
+| Dynamic Title using severity param                                                | ✔️ Present: "<severity> Casualties by Road Type" ✔️ |
+
+### ✅ Parameters
+| Parameter                 | Used?                                             | Review |
+| ------------------------- | ------------------------------------------------- | ------ |
+| Current Year              | ✔️ Yes                                            |        |
+| Previous Year             | ✔️ Yes                                            |        |
+| Select Accident Severity  | ✔️ Fully applied across dashboard elements        |        |
+| Dynamic Filtering Applied | ✔️ Everywhere, including title updates and charts |        |
+
+### ✅ Calculated Fields 
+Each calculation provided is reflected correctly in the dashboard:
 
 --
 
