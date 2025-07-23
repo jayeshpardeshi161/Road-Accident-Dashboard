@@ -213,6 +213,9 @@ Dynamic Title: "All Casualties by Vehicle Type" (dynamic title used ✔️)
 
 ✔️ Fully implemented and accurate based on your description.
 
+--
+
+
 
 ### ✅ Pie Charts
 
@@ -230,17 +233,26 @@ Dynamic Title: "All Casualties by Vehicle Type" (dynamic title used ✔️)
 | Dynamic Title                              | ✔️ Present          |
 | 195.7K total used again                    | ✔️ Matched ✔️       |
 
+--
+
+
 ### ✅ Map – Casualties by Location
 | Requirement                        | Review                                               |
 | ---------------------------------- | ---------------------------------------------------- |
 | Dots plotted by accident locations | ✔️ Map is responsive and detailed                    |
 | Dynamic Title based on severity    | ✔️ "All Casualties by Location" (severity-driven ✔️) |
 
+--
+
+
 ### ✅ Bar Chart – Casualties by Road Type
 | Requirement                                                                       | Review                                              |
 | --------------------------------------------------------------------------------- | --------------------------------------------------- |
 | Road types such as: Single/dual carriageway, roundabout, one way, slip road, etc. | ✔️ 7 types shown with correct totals                |
 | Dynamic Title using severity param                                                | ✔️ Present: "<severity> Casualties by Road Type" ✔️ |
+
+--
+
 
 ### ✅ Parameters
 | Parameter                 | Used?                                             | Review |
@@ -250,8 +262,43 @@ Dynamic Title: "All Casualties by Vehicle Type" (dynamic title used ✔️)
 | Select Accident Severity  | ✔️ Fully applied across dashboard elements        |        |
 | Dynamic Filtering Applied | ✔️ Everywhere, including title updates and charts |        |
 
+--
+
+
 ### ✅ Calculated Fields 
 Each calculation provided is reflected correctly in the dashboard:
+
+### ✅ Implementation Review Table ( Year-on-Year (YoY) formulas )
+| **Component**                       | **Formula / Logic Used**                                                                                                                                           | **Reason**                                                                        | **Status** |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ---------- |
+| **1. YoY: Total Accidents**         | `YoY Accident = ([CY Accident] - [PY Accident]) / [PY Accident]` <br> CY: `COUNT(IF YEAR([Accident Date]) = [Current Year] THEN [Index] END)`                      | Measures percentage change in number of accidents between years                   | ✔️         |
+| **2. YoY: Total Casualties**        | `YoY Casualties = ([CY Casualties] - [PY Casualties]) / [PY Casualties]` <br> CY: `SUM(IF YEAR([Accident Date]) = [Current Year] THEN [Number of Casualties] END)` | Tracks trend in overall casualties to assess safety improvements or deterioration | ✔️         |
+| **3. YoY: Fatal Casualties**        | `YoY Fatal = (CY Fatal - PY Fatal) / PY Fatal` <br> CY Fatal: `SUM(IF [Severity] = 'Fatal' AND YEAR([Date]) = [Current Year] THEN [Casualties] END)`               | Isolates high-impact (fatal) incidents to gauge critical safety performance       | ✔️         |
+| **4. YoY: Serious Casualties**      | `YoY Serious = (CY Serious - PY Serious) / PY Serious` <br> CY Serious: `SUM(IF [Severity] = 'Serious' AND YEAR([Date]) = [Current Year] THEN [Casualties] END)`   | Helps analyze moderate severity trends for intervention planning                  | ✔️         |
+| **5. YoY: Slight Casualties**       | `YoY Slight = (CY Slight - PY Slight) / PY Slight` <br> CY Slight: `SUM(IF [Severity] = 'Slight' AND YEAR([Date]) = [Current Year] THEN [Casualties] END)`         | Evaluates lower-risk accidents, helps with resource allocation                    | ✔️         |
+| **6. YoY: Vehicle Type Casualties** | `YoY = (CY Casualties for Group - PY Casualties for Group) / PY Casualties for Group` <br> Groups: Motorcycle, Bus, Car, Van, Others                               | Understand which vehicle types saw a rise/fall in casualty count 
+
+
+--
+
+
+                 | ✔️         |### ✅ Accident Severity Filters
+| **Component**                         | **Logic Used**                                                                      | **Reason**                                                                | **Status** |
+| ------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------- |
+| **Severity Filter Applied to KPIs**   | `IF [Select Severity] = [Severity] OR [Select Severity] = "All"`                    | Ensures KPIs respond to parameter selection (Fatal, Serious, Slight, All) | ✔️         |
+| **Charts (e.g., Pie, Bar, Map)**      | Same filter logic: `IF [Select Severity] = [Severity] OR [Select Severity] = "All"` | Keeps visualizations consistent and dynamic across severity levels        | ✔️         |
+| **Vehicle Type and Road Type Charts** | Filtered for selected severity                                                      | Enables focused analysis on crash types for different severity levels     | ✔️         |
+
+--
+
+### ✅ Parameter-Driven Dynamic Titles
+| **Component**               | **Dynamic Title Formula**                                  | **Reason**                                                     | **Status** |
+| --------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------- | ---------- |
+| **Vehicle Type Title**      | `"<Select Accident Severity> Casualties By Vehicle Type"`  | Shows exactly what is being visualized based on user selection | ✔️         |
+| **Weather Condition Title** | `"<Select Accident Severity> Casualties By Weather Cond."` | Clarifies weather impact filtered by severity                  | ✔️         |
+| **Road Surface Title**      | `"<Select Accident Severity> Casualties By Road Surface"`  | Improves understanding of context in data slice                | ✔️         |
+| **Road Type Title**         | `"<Select Accident Severity> Casualties By Road Type"`     | Customizes chart heading dynamically                           | ✔️         |
+| **Map Title**               | `"<Select Accident Severity> Casualties By Location"`      | Reinforces spatial data relevance to severity                  | ✔️         |
 
 --
 
