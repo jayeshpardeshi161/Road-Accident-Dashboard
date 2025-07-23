@@ -303,6 +303,9 @@ Each calculation provided is reflected correctly in the dashboard:
 | **Road Type Title**         | `"<Select Accident Severity> Casualties By Road Type"`     | Customizes chart heading dynamically                           | ✔️         |
 | **Map Title**               | `"<Select Accident Severity> Casualties By Location"`      | Reinforces spatial data relevance to severity                  | ✔️         |
 
+--
+
+
 ### 🟢 Final Evaluation: 
 
 I matches every requirement:
@@ -315,8 +318,46 @@ I matches every requirement:
 
 - Visual storytelling is effective
 
+--
+
+
+### 📈 KPI Design & Implementation
+Created KPI cards using calculated fields to track Total Accidents (144,419), Casualties (195,737), and Severity metrics, with embedded YoY percentage changes.
+
+Applied filter logic to ensure all KPI and chart components responded dynamically to accident severity parameter, ensuring consistency across visualizations.
+
+### 🔍 Exploratory Data Analysis (EDA)
+Cleaned and transformed a 66,000+ row dataset; handled null values, outliers (geo-coordinates), and converted dates for temporal analysis.
+
+Derived key analytical dimensions such as weather condition, road surface, and road type, resulting in accurate segmentation (e.g., 80.7% of accidents in fine weather, 67.4% on dry roads).
+
+### 🗺️ Geospatial & Contextual Insights
+Mapped all casualties by latitude/longitude using Mapbox in Tableau, enabling hotspot detection across UK regions for policy and urban planning.
+
+Exposed geographic risk zones and supported stakeholders (e.g., transport departments) with actionable insights into accident-prone areas.
+
+### 🛠️ Business Impact & Outcomes
+Enabled data-driven decision-making by visualizing the role of environmental and vehicle factors in accident severity.
+
+Supported public safety and insurance strategy with insights on urban vs rural road risks, contributing to more focused interventions and planning.
 
 --
+
+
+| **What I Did**                                                                                                                      | **Reason / Impact**                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Developed an interactive Tableau dashboard to analyze UK road accident trends across severity, vehicle type, weather, and location. | Enabled end-to-end visibility of key accident metrics for decision-makers and stakeholders. |
+| Built dynamic KPIs and YoY metrics for 195K+ casualties and 144K+ accidents.                                                        | Helped track progress and identify trends in safety outcomes over time.                     |
+| Grouped 16 vehicle types into 6 categories and visualized casualty distribution.                                                    | Simplified complex data for easier analysis and highlighted high-risk vehicle categories.   |
+| Designed parameter-driven filters and dynamic titles across all charts.                                                             | Enhanced user experience by allowing real-time data slicing and focused analysis.           |
+| Cleaned and transformed 66K+ rows of raw data, handling nulls, outliers, and deriving fields.                                       | Ensured data quality and created consistent structure for accurate analysis.                |
+| Created geospatial map visualizations using latitude/longitude.                                                                     | Identified geographic accident hotspots to support urban planning and policy decisions.     |
+| Delivered insights on environmental risk factors (e.g., 80.7% in fine weather, 67.4% on dry roads).                                 | Provided context to accident conditions and supported targeted safety interventions.        |
+| Enabled stakeholder reporting and analysis through dynamic, drillable dashboards.                                                   | Facilitated quick decision-making through interactive visual storytelling.                  |
+
+
+--
+
 
 ## 🔗 License
 
