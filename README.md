@@ -344,7 +344,7 @@ Supported public safety and insurance strategy with insights on urban vs rural r
 --
 
 
-| **What I Did**                                                                                                                      | **Reason / Impact**                                                                         |
+| **What I Did**                                                                                                                      | **Impact**                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | Developed an interactive Tableau dashboard to analyze UK road accident trends across severity, vehicle type, weather, and location. | Enabled end-to-end visibility of key accident metrics for decision-makers and stakeholders. |
 | Built dynamic KPIs and YoY metrics for 195K+ casualties and 144K+ accidents.                                                        | Helped track progress and identify trends in safety outcomes over time.                     |
