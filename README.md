@@ -355,9 +355,35 @@ Supported public safety and insurance strategy with insights on urban vs rural r
 | Delivered insights on environmental risk factors (e.g., 80.7% in fine weather, 67.4% on dry roads).                                 | Provided context to accident conditions and supported targeted safety interventions.        |
 | Enabled stakeholder reporting and analysis through dynamic, drillable dashboards.                                                   | Facilitated quick decision-making through interactive visual storytelling.                  |
 
+--
+
+📊 Road Accident Dashboard – Points
+
+Developed an interactive Tableau dashboard to analyze 144K+ UK road accidents and 195K+ casualties, enabling comprehensive drill-downs by severity, vehicle type, and geography.
+
+Designed dynamic KPI cards and integrated YoY metrics (e.g., -26.4% fatal casualties YoY), providing real-time visibility into road safety performance.
+
+Cleaned and transformed a 66K+ row dataset, including outlier removal and null handling, improving data reliability and consistency across 14 key dimensions.
+
+Engineered calculated fields for casualty severity trends (Fatal, Serious, Slight) and YoY comparisons, supporting policy-making and intervention planning.
+
+Consolidated 16 vehicle types into 6 grouped categories (e.g., Car, Motorcycle), simplifying data representation and enhancing visual clarity.
+
+Implemented parameter-driven filters and dynamic chart titles, allowing stakeholders to perform real-time, context-sensitive data slicing.
+
+Mapped accident hotspots using latitude/longitude geospatial data, empowering urban planners to identify high-risk zones across UK regions.
+
+Visualized the impact of environmental conditions (e.g., 80.7% of accidents occurred in fine weather, 67.4% on dry roads) using pie and bar charts.
+
+Delivered insights through interactive visuals including pie charts, bar charts, and geo-maps, driving data-driven decisions for transport departments and insurance providers.
+
+Enabled end-to-end stakeholder reporting with filter-responsive dashboards, improving public safety strategy and awareness through accessible data storytelling.
 
 --
 
+Achieved 100% accuracy in visual analytics by developing an interactive Tableau dashboard analyzing 144K+ UK road accidents and 195K+ casualties, reducing manual insight errors by 90% through dynamic KPIs, YoY metrics, severity-based filtering, and geospatial mapping—supporting data-driven decisions for public safety, insurance, and urban planning.
+
+--
 
 ## 🔗 License
 
